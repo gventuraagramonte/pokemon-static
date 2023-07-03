@@ -17,9 +17,14 @@ export const PokemonCard: FC<Props> = ({ pokemon }) => {
         router.push(`/pokemon/${id}`)
     }
 
+    // Puedes usarlo para ir con el nombre
+    const onClickImage = () => {
+        router.push(`/name/${name}`)
+    }
+
     return (
         <Grid xs={6} sm={3} md={2} xl={1} key={id}>
-            <Card isHoverable isPressable onPress={onClick}>
+            <Card isHoverable isPressable onPress={onClickImage}>
                 <Card.Body css={{ p: 1 }}>
                     <Card.Image src={img} width="100%" height={140} />
                 </Card.Body>
